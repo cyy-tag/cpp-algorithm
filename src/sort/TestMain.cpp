@@ -4,6 +4,7 @@
 #include <gtest/gtest.h>
 #include "InsertSort.h"
 #include "QuickSort.h"
+#include "BubbleSort.h"
 
 class SortTest : public  testing::Test {
 protected:
@@ -35,6 +36,15 @@ TEST_F(SortTest, TestInserSort) {
 
 TEST_F(SortTest, TestQuickSort) {
     QuickSort(test_data_, 0, test_data_.size()-1);
+    ASSERT_EQ(test_data_.size(), result_data_.size());
+    for(int i = 0; i < test_data_.size(); ++i)
+    {
+        ASSERT_EQ(test_data_[i], result_data_[i]);
+    }
+}
+
+TEST_F(SortTest, TestBubbleSort) {
+    BubbleSort(test_data_);
     ASSERT_EQ(test_data_.size(), result_data_.size());
     for(int i = 0; i < test_data_.size(); ++i)
     {
