@@ -5,6 +5,7 @@
 #include "InsertSort.h"
 #include "QuickSort.h"
 #include "BubbleSort.h"
+#include "MergeSort.h"
 #include "CountSort.h"
 
 class SortTest : public  testing::Test {
@@ -68,6 +69,14 @@ TEST_F(SortTest, TestBubbleSort) {
     ASSERT_EQ(test_data_.size(), result_data_.size());
     for(int i = 0; i < test_data_.size(); ++i)
     {
+        ASSERT_EQ(test_data_[i], result_data_[i]);
+    }
+}
+
+TEST_F(SortTest, TestMergeSort) {
+    MergeSort(const_cast<int64_t *>(test_data_.data()), 0, test_data_.size());
+    ASSERT_EQ(test_data_.size(), result_data_.size());
+    for (int i = 0; i < test_data_.size(); ++i) {
         ASSERT_EQ(test_data_[i], result_data_[i]);
     }
 }
