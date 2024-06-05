@@ -9,7 +9,7 @@ private:
     int n_;
     vector<int> bit_;
 public:
-    BitTree(int n): n_(n+1), bit_(n+1) {
+    BitTree(int n): n_(n), bit_(n+1) {
     }
 
     int lowbit(int x) {
@@ -22,6 +22,7 @@ public:
         }
     }
 
+    // @param x > 0
     int query(int x) {
         int res = 0;
         for(int i = x; i; i -= lowbit(i)) {
