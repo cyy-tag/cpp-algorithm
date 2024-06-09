@@ -10,6 +10,8 @@ include_directories(
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/build/bin)
 link_libraries(gtest_main gtest)
+#compiler_command.json
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 enable_testing()
 file(GLOB_RECURSE  SCPP_SRC_LIST "src/*.cpp")
