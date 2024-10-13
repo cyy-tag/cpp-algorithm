@@ -18,8 +18,8 @@
 int StirlingNumberSecondKind(int n, int m) {
     // 创建一个二维数组，初始化为0
     std::vector<std::vector<int>> dp(n + 1, std::vector<int>(m + 1, 0));
+    //初始化
     dp[0][0] = 1;
-    // 动态规划填表
     for (int i = 1; i <= n; ++i) {
         for (int j = 1; j <= std::min(i, m); ++j) {
             dp[i][j] = dp[i - 1][j - 1] + j * dp[i - 1][j];
