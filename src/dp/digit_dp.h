@@ -2,7 +2,10 @@
 #include <string>
 
 using namespace std;
-
+// 返回从i 开始填数字, i 前面填的数字的集合是mask, 能构造出的特殊整数的数目
+// is_limit 表示前面填的数字是否都是n对应位上的, 如果为true，那么当前位至多为 int(s[i]), 否则至多为 9
+// is_num 表示前面是否填了数字(是否跳过), 如果为true, 那么当前位可以从0开始
+// 如果为false，那么我们可以跳过，或者从1开始填数字
 int CountSpecialNumbers(int n) {
     auto s = to_string(n);
     int m = s.length(), dp[m][1 << 10];
