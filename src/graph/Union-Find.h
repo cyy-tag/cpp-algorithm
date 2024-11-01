@@ -35,6 +35,10 @@ public:
     }
   }
 
+  int Size(int x) {
+    return rank_[Find(x)];
+  }
+
 private:
   std::vector<int> parent_, rank_;
 };
