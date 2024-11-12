@@ -27,3 +27,14 @@ int CountSpecialNumbers(int n) {
     };
     return f(0, 0, true, false);
 }
+
+/*题目
+ * L, R 求在[L, R]范围内符合条件的个数 ans = f(R) - f(L-1)
+ * https://codeforces.com/problemset/problem/1036/C
+ * 
+ * 求后缀符合条件的个数, 后序遍历
+ * https://codeforces.com/problemset/problem/507/D
+ * 
+ * 全局记忆化, 状态压缩
+ * https://codeforces.com/contest/855/problem/E
+ */
