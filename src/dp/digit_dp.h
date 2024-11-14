@@ -40,6 +40,11 @@ int CountSpecialNumbers(int n) {
 }
 
 /*题目
+ * 基础题目
+ * https://www.luogu.com.cn/problem/P8801
+ * https://www.luogu.com.cn/problem/P8764
+ * 
+ * 提高
  * L, R 求在[L, R]范围内符合条件的个数 ans = f(R) - f(L-1)
  * https://codeforces.com/problemset/problem/1036/C
  * 
@@ -59,5 +64,4 @@ int CountSpecialNumbers(int n) {
  * 
  * 统计回文串个数
  * https://www.luogu.com.cn/problem/B3883
- * 
  * 
