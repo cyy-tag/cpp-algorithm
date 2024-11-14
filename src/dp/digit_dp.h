@@ -50,7 +50,10 @@ int CountSpecialNumbers(int n) {
  * https://codeforces.com/problemset/problem/1036/C
  * 
  * 求后缀符合条件的个数, 后序遍历
+ * 模数的处理，注意从前遍历还是后遍历 从低位到高位可以用 (cur + d*xxx) % k, (xxx*10) % k
+ * 从高位到低位遍历 (x*10 + d)
  * https://codeforces.com/problemset/problem/507/D
+ * https://leetcode.cn/problems/number-of-beautiful-integers-in-the-range/description/
  * 
  * 全局记忆化, 状态压缩, 全局记忆化需要特判 !is_limit和isNum前导零, 以及位数记忆化下标要从低位到高
  * https://codeforces.com/contest/855/problem/E
@@ -66,3 +69,4 @@ int CountSpecialNumbers(int n) {
  * 统计回文串个数
  * https://www.luogu.com.cn/problem/B3883
  * 
+ */
