@@ -58,15 +58,17 @@ int CountSpecialNumbers(int n) {
  * 全局记忆化, 状态压缩, 全局记忆化需要特判 !is_limit和isNum前导零, 以及位数记忆化下标要从低位到高
  * https://codeforces.com/contest/855/problem/E
  * 
- * // 位上计数、求和 [L, R]范围
+ * // 位上计数、求和、奇偶位求和、相邻位处理 [L, R]范围
  * https://www.luogu.com.cn/problem/AT_abc029_d
+ * https://www.luogu.com.cn/problem/P6218 二进制 0, 1个数比较
  * https://www.luogu.com.cn/problem/P2602
  * https://www.luogu.com.cn/problem/P4999
+ * https://www.luogu.com.cn/problem/P2657 位相邻处理
  * 
  * 在给定范围查找[l, r] 第K个符合条件的 二分答案 + 数位dp
  * https://www.luogu.com.cn/problem/AT_arc173_a
  * 
- * 统计回文串个数
+ * 统计回文串个数, 技巧遍历位数的一半+1(奇数情况)
  * https://www.luogu.com.cn/problem/B3883
  * 
  */
