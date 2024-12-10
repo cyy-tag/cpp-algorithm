@@ -71,4 +71,14 @@ int CountSpecialNumbers(int n) {
  * 统计回文串个数, 技巧遍历位数的一半+1(奇数情况)
  * https://www.luogu.com.cn/problem/B3883
  * 
+ * 步进数
+ * https://leetcode.cn/problems/count-stepping-numbers-in-range/description/
+ * https://www.luogu.com.cn/problem/P2657
+ * 
+ * 提高
+ * 记忆化状态表示练习
+ * https://leetcode.cn/problems/count-the-number-of-powerful-integers/description/
+ * https://ac.nowcoder.com/acm/problem/50520
+ * 超时优化
+ * https://ac.nowcoder.com/acm/problem/50521
  */

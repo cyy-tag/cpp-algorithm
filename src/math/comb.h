@@ -17,6 +17,23 @@ long long C(int n, int m)
 }
 
 /*
+ * 组合数预处理C(a, b) = C(a-1, b-1) + C(a-1, b) 
+ * 在a集合中取b个 以取不取第b个分类讨论
+ *  取第b个，那么在剩余a-1中取b-1个
+ *  不取第b个，那么在剩余a-1中取b个
+ */
+const int N = 35;
+int f[N][N];
+void init() {
+  for(int i = 0; i < N; i++) {
+    for(int j = 0; j <= i; j++) {
+      if(!j) f[i][j] = 1; //C(i, 0)
+      else f[i][j] = f[i-1][j] + f[i-1][j-1];
+    }
+  }
+}
+
+/*
   A(n, m) = n*(n-1)*(n-2)*(n - m + 1) = n!/(n-m)!
 */
 
