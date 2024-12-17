@@ -28,7 +28,35 @@
  * 结论: 如果p是一个指数， a是b的倍数且b和p互质（b 不是 p的倍数），那么有
  * a/b mod p = (a * b^(p -2)) mod p (可以用快速幂处理)
  * 详细证明地址：https://leetcode.cn/circle/discuss/mDfnkW/
- * 
+ * 处理阶乘和逆元的模板
+ */
+  const int MOD = 1'000'000'007;
+  const int MX = 41;
+
+  long long F[MX]; // F[i] = i!
+  long long INV_F[MX]; // INV_F[i] = i!^-1
+
+  long long pow(long long x, int n) {
+      long long res = 1;
+      for (; n; n /= 2) {
+          if (n % 2) {
+              res = res * x % MOD;
+          }
+          x = x * x % MOD;
+      }
+      return res;
+  }
+
+  auto init = [] {
+      F[0] = 1;
+      for (int i = 1; i < MX; i++) {
+          F[i] = F[i - 1] * i % MOD;
+          INV_F[i-1] = pow(F[i-1], MOD-2);
+      }
+      return 0;
+  }();
+
+/*
  * 扩展欧拉定理--降幂
  * 欧拉函数(Euler's totient function)， u(n) 表示的是小于等于n和n互质的个数。
  * 当遇到指数运算，指数过大时可以使用拓展欧拉定理降幂

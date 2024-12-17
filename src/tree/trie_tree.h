@@ -29,6 +29,7 @@ public:
     for(char c : word) {
       if(!cur->nexts[c - 'a'])
         return false;
+      cur = cur->nexts[c - 'a'];
     }
     return cur->is_end_;
   }
